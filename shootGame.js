@@ -35,6 +35,8 @@ let userAk47 = false;
 let gameLevel = 1;
 let passBestScore = false;
 let instruction = false;
+var breakout = true;
+
 
 //* OBJECTS
 const Key = {
@@ -182,7 +184,7 @@ let life = [ '❤️', '❤️', '❤️' ];
 let missileNum = [ '🧨', '🧨', '🧨' ];
 
 // Audios
-let backgroundSound = new Audio('audio/2.ogg');
+let backgroundSound = new Audio('audio/ActionMenu.mp3');
 let fireSound = new Audio('audio/fire.mp3');
 let crash = new Audio('audio/crash.mp3');
 let bound = new Audio('audio/rebound.mp3');
@@ -280,7 +282,7 @@ function CheckCollision() {
 			// sound
 			crash.currentTime = 0.5;
 			crash.play();
-			crash.volume = 0.1;
+			crash.volume = 0.5;
 
 			if (score > BESTSCORE && passBestScore == false) {
 				points.push(new Sprite(cw / 2 - 200, 0, 4, 60, '🎊NEW BESTSCORE🎊'));
@@ -293,7 +295,7 @@ function CheckCollision() {
 			score += 500;
 			// sound
 			crash.play();
-			crash.volume = 0.5;
+			crash.volume = 0.8;
 
 			if (score > BESTSCORE && passBestScore == false) {
 				points.push(new Sprite(cw / 2 - 200, 0, 4, 60, '🎊NEW BESTSCORE🎊'));
@@ -324,7 +326,7 @@ function CheckCollision() {
 				// sound
 				crash.currentTime = 0.5;
 				crash.play();
-				crash.volume = 0.1;
+				crash.volume = 0.5;
 
 				if (score > BESTSCORE && passBestScore == false) {
 					points.push(new Sprite(cw / 2 - 200, 0, 4, 60, '🎊NEW BESTSCORE🎊'));
@@ -492,6 +494,7 @@ let SetMenu = () => {
 		DrawArray(points);
 
 		RandomColor();
+		backgroundSound.volume = 0.1;
 		GAMEOVER.play();
 
 		hero.c = '👽';
@@ -502,7 +505,10 @@ let SetMenu = () => {
 		pause = true;
 
 		// UPDATE THE TABLE'S CONTENT
-		saveScore();
+		if(breakout==true){
+			saveScore();
+			breakout = false;
+		}
 	}
 
 	if (instruction == false) {
@@ -605,13 +611,16 @@ let SetLevel = (x) => {
 	}
 };
 //* THIS FUNCION CONTAIN ALL DETAILS THAT I WANT TO BE IN THE GAME
+score = 3500;
 let Int = () => {
+	
+		drawScore();
+
 	Events();
-	drawScore();
 	if (!pause && instruction) {
-		// backgroundSound.play();
-		// backgroundSound.loop = true;
-		// backgroundSound.volume = 0.5;
+		backgroundSound.play();
+		backgroundSound.loop = true;
+		backgroundSound.volume = 0.5;
 
 		//* HERE I DRAW THE MAIN CARACTER (THE NAVE)
 		hero.drawHero();
