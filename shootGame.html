@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShootGame</title>
+    <link rel="stylesheet" href="shootGame.css">
+</head>
+
+<body>
+    <h1>ShootGame</h1>
+    <div class='score-board' id='scoreBoard'></div>
+    <div class='life-board' id='lifeBoard'></div>
+    <div class='missile-num' id='missileNum'></div>
+    <div class='new-gun-board' id='newGunBoard'></div>
+    <div class='game-level' id='GameLevel'></div>
+    <div class='best-score' id='bestScore'></div>
+    <div class='player-name' id='playerName'></div>
+    <div class='restart-game' id='restartGame'></div>
+    <div class='control-game' id='controlGame'>
+        <pre><h1>Keyboard Controls:</h1>
+             
+            <br>
+            <span>Q:</span> swap-gun.
+            
+            <span>L:</span> Shoot.
+            
+            <span>Spac:</span> Shoot-Missiles.
+            
+            <span>Esc:</span> pause the game.
+            
+            <span>AWSD:</span> to move your chracter.
+            
+            <span>Arrow-Keys:</span> to move the chracter.
+            <h1>Mouse controls:</h1>
+            <br>
+            <br>
+            <span>Left-Click:</span>Shoot.
+             
+            <span>Right-Click:</span> Shoot-Missiles.
+
+            <span>Scroll-Button:</span> swap-gun.
+
+             
+            <h1 class="btn" id="button">PLAY▶️</h1>
+        </pre>
+    </div>
+
+    <!-- SCORE TABLE -->
+    <div class="table-board" id="tableBoard">
+        <table class="table" id="table">
+            <thead>
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Score</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <canvas width="800" height="750"></canvas>
+    <script src="table.js"></script>
+    <script src="shootGame.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+body {
+	background-color: black;
+
+	zoom: 80%;
+}
+h1 {
+	position: absolute;
+	left: 62%;
+	font-size: xx-large;
+	color: white;
+}
+canvas {
+	display: block;
+	position: absolute;
+	left: 1%;
+	background-image: url(img/space.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	border: 1px solid #246355;
+}
+div {
+	display: inline;
+	position: relative;
+	z-index: 1;
+	font-family: monospace;
+	color: white;
+	font-size: 20px;
+	top: 50px;
+}
+.score-board {
+	left: 1.5%;
+}
+.new-gun-board {
+	position: absolute;
+	top: 12%;
+	left: 2%;
+}
+.game-level {
+	position: absolute;
+	top: 12%;
+	left: 15%;
+}
+.best-score {
+	position: absolute;
+	top: 12%;
+	left: 22%;
+}
+.player-name {
+	position: absolute;
+	top: 12%;
+	left: 34%;
+}
+.restart-game {
+	position: absolute;
+	top: 45%;
+	left: 15%;
+	font-size: 6em;
+	visibility: hidden;
+}
+div pre {
+	text-align: justify;
+}
+div pre h1 {
+	position: absolute;
+	left: 35%;
+}
+span {
+	color: lightcyan;
+}
+.control-game {
+	position: absolute;
+	top: 6%;
+	left: 2%;
+	text-align: center;
+	font-size: 18px;
+	visibility: visible;
+	border: 5px solid #246355;
+	border-radius: 15px;
+	background-color: #0f362d;
+	cursor: pointer;
+	width: 45%;
+	height: 86%;
+}
+.btn {
+	/* visibility: hidden; */
+	position: absolute;
+	top: 80%;
+	left: 35%;
+	font-size: 2em;
+	padding: 5px;
+	visibility: visible;
+	background-color: #246355;
+	border: 5px solid #ddd;
+	border-radius: 15px;
+}
+.life-board {
+	left: 2%;
+}
+.missile-num {
+	left: 3%;
+}
+.restart-game:hover,
+#btn:hover {
+	border: 5px solid #246355;
+	border-radius: 15px;
+	background-color: #0f362d;
+	cursor: pointer;
+}
+
+/* TABLE CSS   */
+.table-board {
+	position: absolute;
+	/* margin: 150px auto; */
+	width: 600px;
+	left: 50%;
+	top: 15%;
+}
+
+table {
+	width: 100%;
+	background-color: white;
+	border-collapse: collapse;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+th,
+td {
+	padding: 20px;
+}
+
+thead {
+	background-color: #246355;
+	border-bottom: solid 5px #0f362d;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #ddd;
+}
+
+tr:hover td {
+	background-color: #369681;
+	color: white;
+}
