@@ -611,7 +611,6 @@ let SetLevel = (x) => {
 	}
 };
 //* THIS FUNCION CONTAIN ALL DETAILS THAT I WANT TO BE IN THE GAME
-score = 3500;
 let Int = () => {
 	
 		drawScore();
